@@ -1,0 +1,12 @@
+Source: ros-rolling-magnetometer-compass
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-rolling-ament-cmake, ros-rolling-ament-cmake-gen-version-h, ros-rolling-ament-cmake-gtest <!nocheck>, ros-rolling-ament-cmake-ros <!nocheck>, ros-rolling-angles, ros-rolling-builtin-interfaces <!nocheck>, ros-rolling-compass-conversions, ros-rolling-compass-interfaces, ros-rolling-cras-cpp-common, ros-rolling-cras-lint <!nocheck>, ros-rolling-geometry-msgs, ros-rolling-magnetometer-pipeline, ros-rolling-message-filters, ros-rolling-pluginlib, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-rolling-sensor-msgs, ros-rolling-std-msgs, ros-rolling-tf2, ros-rolling-tf2-geometry-msgs, ros-rolling-tf2-ros, ros-rolling-tf2-sensor-msgs, ros-rolling-ros-workspace
+Homepage: https://index.ros.org/p/magnetometer_compass
+Standards-Version: 3.9.2
+
+Package: ros-rolling-magnetometer-compass
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-rolling-angles, ros-rolling-compass-conversions, ros-rolling-compass-interfaces, ros-rolling-cras-cpp-common, ros-rolling-geometry-msgs, ros-rolling-magnetometer-pipeline, ros-rolling-message-filters, ros-rolling-pluginlib, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-rolling-sensor-msgs, ros-rolling-std-msgs, ros-rolling-tf2, ros-rolling-tf2-geometry-msgs, ros-rolling-tf2-ros, ros-rolling-tf2-sensor-msgs, ros-rolling-ros-workspace
+Description: Compass based on a 3-axis magnetometer, attitude readings and possibly also GNSS.
