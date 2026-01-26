@@ -1,72 +1,62 @@
 <!-- SPDX-License-Identifier: BSD-3-Clause -->
 <!-- SPDX-FileCopyrightText: Czech Technical University in Prague -->
 
-# magnetometer\_pipeline
+# Compass stack
 
-Calibration and removing of magnetometer bias.
+This collection of packages provides support for working with azimuths in ROS.
 
-## Node magnetometer\_bias\_remover\_node and component node magnetometer\_pipeline::MagnetometerBiasRemoverNodelet
+## Packages
 
-For the magnetometer to work correctly, it is required to measure its bias. This node listens on the `imu/mag_bias`
-topic for this measurement, and until at least one message arrives, the node will not publish anything. If you do not
-have a node publishing the bias, you can alternatively provide it via parameters. Depending on the application, it
-may be required to re-estimate the bias from time to time even during runtime.
+- [compass_interfaces](compass_interfaces): The message definitions.
+- [compass_conversions](compass_conversions): Helpers for converting between different representations of azimuths.
+- [magnetic_model](magnetic_model): ROS bindings for World Magnetic Model.
+- [magnetometer_compass](magnetometer_compass): Support and ROS nodes for extracting azimuths from 3-axis magnetometers.
+- [magnetometer_pipeline](magnetometer_pipeline): Calibration and removing of magnetometer bias.
 
-### Subscribed topics
-- `imu/mag` (`sensor_msgs/MagneticField`): 3-axis magnetometer measurements (bias not removed).
-- `imu/mag_bias` (`sensor_msgs/MagneticField`): Bias of the magnetometer. This value will be subtracted from the
-    incoming magnetometer measurements. Messages on this topic do not need to come repeatedly if the bias does not
-    change. The `magnetic_field_covariance` field can be "misused" to carry a 3x3 bias scaling matrix.
+## Installation
 
-### Published topics (see above for explanation)
-- `imu/mag_unbiased` (`sensor_msgs/MagneticField`): The magnetic field measurement with bias removed.
+![ROS 1 compatible](https://img.shields.io/badge/ROS-1-blue) ![Melodic](https://img.shields.io/badge/melodic-green) ![Noetic](https://img.shields.io/badge/noetic-green)
 
-If you want to remap all topics under a different namespace than `imu`, it is sufficient to remap just `imu:=new_imu`.
+Code on `master` branch is for ROS 1 and it has binary releases.
 
-### Parameters
-- `~initial_mag_bias_x` (double, no default, optional): Magnetometer bias in the X axis.
-- `~initial_mag_bias_y` (double, no default, optional): Magnetometer bias in the Y axis.
-- `~initial_mag_bias_z` (double, no default, optional): Magnetometer bias in the Z axis.
-- `~initial_scaling_matrix` (double\[9\], optional): Magnetometer scaling matrix (row-major).
-- If you specify any of the `~initial_mag_bias_*` params, the node does not need to receive the bias messages.
+![ROS 2 compatible](https://img.shields.io/badge/ROS-2-blue) ![Jazzy](https://img.shields.io/badge/jazzy-green) ![Kilted](https://img.shields.io/badge/kilted-green) ![Rolling](https://img.shields.io/badge/rolling-green)
 
-## Node magnetometer\_bias\_observer
+Code on `ros2` branch is for ROS 2 Jazzy and Kilted and does not yet have binary releases.
 
-Magnetometer bias estimation node.
+To build this package on ROS 2, you'll need additional packages in your workspace: [rosinstall file](.github/ci.ros2.rosinstall).
 
-### Subscribed topics
+## Definitions
 
-- `imu/mag` (`sensor_msgs/MagneticField`): The raw magnetometer measurements.
+**ENU** frame is the [standard orientation used in ROS](https://www.ros.org/reps/rep-0103.html). The abbreviation means
+East-North-Up and corresponds to the meaning of vector components X, Y and Z. A zero azimuth points towards East and it
+increases counter-clockwise.
 
-### Published topics
+**NED** frame is the "intuitive" North-East-Down orientation where the zero azimuth points to North and increases
+clockwise, just as you are used to when using a compass.
 
-- `imu/mag_bias` (`sensor_msgs/MagneticField`): The estimated bias.
-- `speak/warn` (`std_msgs/String`): Optional topic on which the node reports user instructions.
+**Magnetic azimuth** is the angle between Earth's magnetic North (or East in ENU frame) and a specified direction.
 
-### Provided services
+**True azimuth** (also called geographic, map or geodetic North) is the angle between Earth's geographic North (or East
+in ENU frame) and a specified direction.
 
-- `calibrate_magnetometer` (`std_srvs/Trigger`): Call this service to start bias estimation. Rotate the robot in as much
-    axes as possible during the calibration.
+**UTM azimuth** (also called grid azimuth) is the angle between UTM North (or East in ENU frame) and a specified
+direction. [UTM](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system) is a planar projection
+of Earth's surface onto predefined rectangles, which yields a Cartesian coordinate system. The Earth is divided into
+several stripes which are unrolled into a plane to form the UTM grid. These stripes are called **UTM zones**. Each UTM
+zone is 6 degrees of longitude wide, but it is considered valid in a slightly larger area, approximately 100 km
+outside its precise bounds. This allows sticking to a single UTM zone to prevent zone switching when moving close to
+the boundary of two zones.
 
-### Parameters
+The difference between magnetic and true North is called **magnetic declination**. Its values are location- and
+time-dependent and they are approximated by the
+[World Magnetic Model](https://www.ncei.noaa.gov/products/world-magnetic-model).
 
-- `~measuring_time` (double, default 30 s): How long should the bias estimation phase be.
-- `~2d_mode` (bool, default true): If true, the calibration expects motion in only 2 axes instead of 3.
-- `~2d_mode_ignore_axis` ('X', 'Y' or 'Z', default autodetect): If you know which magnetometer local axis will not be
-    used in 2D calibration, you can set it here.
-- `~load_from_params` (bool, default false): If true, initial bias estimate will be loaded from ROS params.
-- `magnetometer_bias_x` (double, default 0.0): The initial bias estimate for X axis (if `~load_from_params` is true).
-- `magnetometer_bias_y` (double, default 0.0): The initial bias estimate for Y axis (if `~load_from_params` is true).
-- `magnetometer_bias_z` (double, default 0.0): The initial bias estimate for Z axis (if `~load_from_params` is true).
-- `~load_from_file` (bool, default true): If true, the initial bias estimate will be loaded from
-    `~/.ros/magnetometer_calib.yaml`.
-- `~calibration_file_path` (str, default `~/.ros/magnetometer_calib.yaml`): Path to the calibration file.
-- `~save_to_file` (bool, default true): If true, the last estimated bias will be saved to the calibration file.
+The difference between true North and grid North is called **grid convergence**. Its values are only location-dependent
+and do not differ in time. The values also depend on the chosen UTM zone.
 
-## `MagnetometerBiasRemover` class
+Although [ROS specifies that all angular values should be expressed in radians](https://www.ros.org/reps/rep-0103.html),
+the usage of degrees in geography is so common that
+[Azimuth](https://docs.ros.org/en/api/compass_interfaces/html/msg/Azimuth.html) messages support both radians and degrees.
 
-Helper class to remove known bias from 3-axis magnetometer.
-
-## `BiasRemoverFilter` message filter
-
-Message filter providing magnetometer measurements with removed bias.
+For more information, see https://www.drillingformulas.com/magnetic-declination-and-grid-convergent-and-their-applications-in-directional-drilling/
+or https://en.wikipedia.org/wiki/Azimuth .
