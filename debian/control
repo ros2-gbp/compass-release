@@ -1,0 +1,12 @@
+Source: ros-kilted-magnetic-model
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), libgeographiclib-dev, ros-kilted-ament-cmake, ros-kilted-ament-cmake-gen-version-h, ros-kilted-ament-cmake-gtest <!nocheck>, ros-kilted-angles, ros-kilted-cras-cpp-common, ros-kilted-cras-lint <!nocheck>, ros-kilted-geometry-msgs, ros-kilted-rclcpp, ros-kilted-sensor-msgs, ros-kilted-ros-workspace
+Homepage: https://index.ros.org/p/magnetic_model
+Standards-Version: 3.9.2
+
+Package: ros-kilted-magnetic-model
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgeographiclib-dev, ros-kilted-angles, ros-kilted-cras-cpp-common, ros-kilted-geometry-msgs, ros-kilted-rclcpp, ros-kilted-sensor-msgs, ros-kilted-ros-workspace
+Description: World Magnetic Model ROS API.
