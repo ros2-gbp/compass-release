@@ -1,0 +1,62 @@
+ros-rolling-compass-interfaces (3.0.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 25 Jan 2026 23:00:00 -0000
+
+ros-rolling-compass-interfaces (3.0.0-1bookworm) bookworm; urgency=high
+
+  * ROS 2 port.
+  * Contributors: Adam Herold, Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 25 Jan 2026 23:00:00 -0000
+
+ros-rolling-compass-interfaces (2.0.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 19 Dec 2024 23:00:00 -0000
+
+ros-rolling-compass-interfaces (2.0.2-1bookworm) bookworm; urgency=high
+
+  * Fixed README rendering on ROS Wiki.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 19 Dec 2024 23:00:00 -0000
+
+ros-rolling-compass-interfaces (2.0.1-1bookworm) bookworm; urgency=high
+
+  * Fixed license issues preventing bloom-release.
+  * Improved readme.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 11 Dec 2024 23:00:00 -0000
+
+ros-rolling-compass-interfaces (2.0.0-1bookworm) bookworm; urgency=high
+
+  * Restructured the repo, created compass_conversions, magnetic_model and magnetometer_pipeline packages.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 11 Dec 2024 23:00:00 -0000
+
+ros-rolling-compass-interfaces (1.0.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Tue, 11 Jul 2023 22:00:00 -0000
+
+ros-rolling-compass-interfaces (1.0.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Tue, 11 Jul 2023 22:00:00 -0000
+
+ros-rolling-compass-interfaces (1.0.1-1bookworm) bookworm; urgency=high
+
+  * Added variance to Azimuth message.
+  * Added improved version of compass.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 18 Jun 2023 22:00:00 -0000
+
+
