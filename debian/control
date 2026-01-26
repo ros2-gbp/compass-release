@@ -1,0 +1,12 @@
+Source: ros-jazzy-magnetic-model
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), libgeographiclib-dev, ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-gen-version-h, ros-jazzy-ament-cmake-gtest <!nocheck>, ros-jazzy-angles, ros-jazzy-cras-cpp-common, ros-jazzy-cras-lint <!nocheck>, ros-jazzy-geometry-msgs, ros-jazzy-rclcpp, ros-jazzy-sensor-msgs, ros-jazzy-ros-workspace
+Homepage: https://index.ros.org/p/magnetic_model
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-magnetic-model
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgeographiclib-dev, ros-jazzy-angles, ros-jazzy-cras-cpp-common, ros-jazzy-geometry-msgs, ros-jazzy-rclcpp, ros-jazzy-sensor-msgs, ros-jazzy-ros-workspace
+Description: World Magnetic Model ROS API.
