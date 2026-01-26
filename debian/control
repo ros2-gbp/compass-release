@@ -1,0 +1,12 @@
+Source: ros-kilted-magnetometer-compass
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-kilted-ament-cmake, ros-kilted-ament-cmake-gen-version-h, ros-kilted-ament-cmake-gtest <!nocheck>, ros-kilted-ament-cmake-ros <!nocheck>, ros-kilted-angles, ros-kilted-builtin-interfaces <!nocheck>, ros-kilted-compass-conversions, ros-kilted-compass-interfaces, ros-kilted-cras-cpp-common, ros-kilted-cras-lint <!nocheck>, ros-kilted-geometry-msgs, ros-kilted-magnetometer-pipeline, ros-kilted-message-filters, ros-kilted-pluginlib, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-sensor-msgs, ros-kilted-std-msgs, ros-kilted-tf2, ros-kilted-tf2-geometry-msgs, ros-kilted-tf2-ros, ros-kilted-tf2-sensor-msgs, ros-kilted-ros-workspace
+Homepage: https://index.ros.org/p/magnetometer_compass
+Standards-Version: 3.9.2
+
+Package: ros-kilted-magnetometer-compass
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-kilted-angles, ros-kilted-compass-conversions, ros-kilted-compass-interfaces, ros-kilted-cras-cpp-common, ros-kilted-geometry-msgs, ros-kilted-magnetometer-pipeline, ros-kilted-message-filters, ros-kilted-pluginlib, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-sensor-msgs, ros-kilted-std-msgs, ros-kilted-tf2, ros-kilted-tf2-geometry-msgs, ros-kilted-tf2-ros, ros-kilted-tf2-sensor-msgs, ros-kilted-ros-workspace
+Description: Compass based on a 3-axis magnetometer, attitude readings and possibly also GNSS.
