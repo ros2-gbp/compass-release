@@ -1,0 +1,68 @@
+ros-rolling-magnetic-model (3.0.2-1noble) noble; urgency=high
+
+  * Fixed build with GCC 11
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 25 Jan 2026 23:00:00 -0000
+
+ros-rolling-magnetic-model (3.0.1-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 25 Jan 2026 23:00:00 -0000
+
+ros-rolling-magnetic-model (3.0.0-1noble) noble; urgency=high
+
+  * Added IGRF-14 and GAZEBO magnetic models.
+  * ROS 2 port.
+  * Contributors: Adam Herold, Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 25 Jan 2026 23:00:00 -0000
+
+ros-rolling-magnetic-model (2.0.3-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 19 Dec 2024 23:00:00 -0000
+
+ros-rolling-magnetic-model (2.0.2-1noble) noble; urgency=high
+
+  * Added WMM2025.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 19 Dec 2024 23:00:00 -0000
+
+ros-rolling-magnetic-model (2.0.1-1noble) noble; urgency=high
+
+  * Fixed license issues preventing bloom-release.
+  * Fixed documentation generation.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 11 Dec 2024 23:00:00 -0000
+
+ros-rolling-magnetic-model (2.0.0-1noble) noble; urgency=high
+
+  * Restructured the repo, created compass_conversions, magnetic_model and magnetometer_pipeline packages.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 11 Dec 2024 23:00:00 -0000
+
+ros-rolling-magnetic-model (1.0.3-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 12 Jul 2023 13:43:00 -0000
+
+ros-rolling-magnetic-model (1.0.2-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 12 Jul 2023 13:26:00 -0000
+
+ros-rolling-magnetic-model (1.0.1-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 18 Jun 2023 22:00:00 -0000
+
+
