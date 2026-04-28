@@ -5,12 +5,6 @@
 Changelog for package compass_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.0.3 (2026-04-27)
-------------------
-* Fixed outdated references
-* Docs: Added build status to repo readmes.
-* Contributors: Martin Pecka
-
 3.0.2 (2026-01-26)
 ------------------
 * Fixed build with GCC 11
