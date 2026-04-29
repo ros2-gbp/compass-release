@@ -1,1 +1,1 @@
-{"base": "2362b87eb3f0", "parent": "debian/rolling/magnetometer_pipeline", "previous": "9742c28c3a38", "trim": "", "trimbase": ""}
+{"base": "83eb65a", "parent": "debian/lyrical/magnetometer_pipeline", "previous": "4d9ffe9", "trim": "", "trimbase": ""}
