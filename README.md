@@ -1,62 +1,25 @@
 <!-- SPDX-License-Identifier: BSD-3-Clause -->
 <!-- SPDX-FileCopyrightText: Czech Technical University in Prague -->
 
-# Compass stack
+# compass\_msgs
 
-This collection of packages provides support for working with azimuths in ROS.
+Messages for use with a compass.
 
-## Packages
+## Azimuth
 
-- [compass_interfaces](compass_interfaces): The message definitions.
-- [compass_conversions](compass_conversions): Helpers for converting between different representations of azimuths.
-- [magnetic_model](magnetic_model): ROS bindings for World Magnetic Model.
-- [magnetometer_compass](magnetometer_compass): Support and ROS nodes for extracting azimuths from 3-axis magnetometers.
-- [magnetometer_pipeline](magnetometer_pipeline): Calibration and removing of magnetometer bias.
+[Azimuth](https://docs.ros.org/en/api/compass_interfaces/html/msg/Azimuth.html) message carries information about an azimuth.
+As there are multiple possibilities related to the azimuth meaning, it has 3 metadata fields that exactly specify the
+meaning of each message:
 
-## Installation
-
-![ROS 1 compatible](https://img.shields.io/badge/ROS-1-blue) ![Melodic](https://img.shields.io/badge/melodic-green) ![Noetic](https://img.shields.io/badge/noetic-green)
-
-Code on `master` branch is for ROS 1 and it has binary releases.
-
-![ROS 2 compatible](https://img.shields.io/badge/ROS-2-blue) ![Jazzy](https://img.shields.io/badge/jazzy-green) ![Kilted](https://img.shields.io/badge/kilted-green) ![Rolling](https://img.shields.io/badge/rolling-green)
-
-Code on `ros2` branch is for ROS 2 Jazzy and Kilted and does not yet have binary releases.
-
-To build this package on ROS 2, you'll need additional packages in your workspace: [rosinstall file](.github/ci.ros2.rosinstall).
-
-## Definitions
-
-**ENU** frame is the [standard orientation used in ROS](https://www.ros.org/reps/rep-0103.html). The abbreviation means
-East-North-Up and corresponds to the meaning of vector components X, Y and Z. A zero azimuth points towards East and it
-increases counter-clockwise.
-
-**NED** frame is the "intuitive" North-East-Down orientation where the zero azimuth points to North and increases
-clockwise, just as you are used to when using a compass.
-
-**Magnetic azimuth** is the angle between Earth's magnetic North (or East in ENU frame) and a specified direction.
-
-**True azimuth** (also called geographic, map or geodetic North) is the angle between Earth's geographic North (or East
-in ENU frame) and a specified direction.
-
-**UTM azimuth** (also called grid azimuth) is the angle between UTM North (or East in ENU frame) and a specified
-direction. [UTM](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system) is a planar projection
-of Earth's surface onto predefined rectangles, which yields a Cartesian coordinate system. The Earth is divided into
-several stripes which are unrolled into a plane to form the UTM grid. These stripes are called **UTM zones**. Each UTM
-zone is 6 degrees of longitude wide, but it is considered valid in a slightly larger area, approximately 100 km
-outside its precise bounds. This allows sticking to a single UTM zone to prevent zone switching when moving close to
-the boundary of two zones.
-
-The difference between magnetic and true North is called **magnetic declination**. Its values are location- and
-time-dependent and they are approximated by the
-[World Magnetic Model](https://www.ncei.noaa.gov/products/world-magnetic-model).
-
-The difference between true North and grid North is called **grid convergence**. Its values are only location-dependent
-and do not differ in time. The values also depend on the chosen UTM zone.
-
-Although [ROS specifies that all angular values should be expressed in radians](https://www.ros.org/reps/rep-0103.html),
-the usage of degrees in geography is so common that
-[Azimuth](https://docs.ros.org/en/api/compass_interfaces/html/msg/Azimuth.html) messages support both radians and degrees.
-
-For more information, see https://www.drillingformulas.com/magnetic-declination-and-grid-convergent-and-their-applications-in-directional-drilling/
-or https://en.wikipedia.org/wiki/Azimuth .
+- `unit`:
+  - `UNIT_DEG`: `azimuth` field is in degrees and `variance` in degrees^2
+  - `UNIT_RAD`: `azimuth` field is in radians and `variance` in rad^2
+- `orientation`
+  - `ORIENTATION_ENU`: The azimuth is measured in East-North-Up frame. Azimuth 0 thus points to the East and increases
+      counter-clockwise.
+  - `ORIENTATION_NED`: The azimuth is measured in North-East-Down frame. Azimuth 0 thus points to the North and
+      increases clockwise.
+- `reference`: Which North reference is used.
+  - `REFERENCE_MAGNETIC`: Magnetic North.
+  - `REFERENCE_GEOGRAPHIC`: Geographic North.
+  - `REFERENCE_UTM`: UTM grid North.
