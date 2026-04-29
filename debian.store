@@ -1,1 +1,1 @@
-{"base": "8d844010a58d", "parent": "debian/rolling/magnetometer_compass", "previous": "2b9e1636a8e1", "trim": "", "trimbase": ""}
+{"base": "0f95cd3", "parent": "debian/lyrical/magnetometer_compass", "previous": "a8e5c19", "trim": "", "trimbase": ""}
