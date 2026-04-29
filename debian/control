@@ -1,0 +1,12 @@
+Source: ros-lyrical-magnetometer-compass
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-gen-version-h, ros-lyrical-ament-cmake-gtest <!nocheck>, ros-lyrical-ament-cmake-ros <!nocheck>, ros-lyrical-angles, ros-lyrical-builtin-interfaces <!nocheck>, ros-lyrical-compass-conversions, ros-lyrical-compass-interfaces, ros-lyrical-cras-cpp-common, ros-lyrical-cras-lint <!nocheck>, ros-lyrical-geometry-msgs, ros-lyrical-magnetometer-pipeline, ros-lyrical-message-filters, ros-lyrical-pluginlib, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-sensor-msgs, ros-lyrical-std-msgs, ros-lyrical-tf2, ros-lyrical-tf2-geometry-msgs, ros-lyrical-tf2-ros, ros-lyrical-tf2-sensor-msgs, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/magnetometer_compass
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-magnetometer-compass
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-lyrical-angles, ros-lyrical-compass-conversions, ros-lyrical-compass-interfaces, ros-lyrical-cras-cpp-common, ros-lyrical-geometry-msgs, ros-lyrical-magnetometer-pipeline, ros-lyrical-message-filters, ros-lyrical-pluginlib, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-sensor-msgs, ros-lyrical-std-msgs, ros-lyrical-tf2, ros-lyrical-tf2-geometry-msgs, ros-lyrical-tf2-ros, ros-lyrical-tf2-sensor-msgs, ros-lyrical-ros-workspace
+Description: Compass based on a 3-axis magnetometer, attitude readings and possibly also GNSS.
