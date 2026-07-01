@@ -5,6 +5,9 @@
 Changelog for package compass_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.0.4 (2026-07-01)
+------------------
+
 3.0.3 (2026-04-27)
 ------------------
 * Fixed outdated references
