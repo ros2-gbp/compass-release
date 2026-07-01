@@ -1,0 +1,29 @@
+<!-- SPDX-License-Identifier: BSD-3-Clause -->
+<!-- SPDX-FileCopyrightText: Czech Technical University in Prague -->
+
+# magnetic\_model
+
+This package contains utilities for working with the
+[World Magnetic Model](https://en.wikipedia.org/wiki/World_Magnetic_Model), e.g. computing magnetic declination.
+
+The package also embeds the IGRF-14 model for predictions dating back to 1900.
+
+There is also special support for the Gazebo Magnetometer model, which is a special instance of IGRF-14.
+
+## C++ Libraries
+
+### magnetic\_model::MagneticModel
+
+A class that can examine the Earth magnetic model and answer questions about it like field strength and components.
+
+### magnetic\_model::MagneticModelManager
+
+A manager class for `MagneticModel`s that can automatically load and return the most suitable model.
+
+## ROS 2 Build status
+
+| Distro | Source Ubuntu | Source RHEL | Ubuntu amd64 | Ubuntu arm64 | RHEL amd64 |
+|--------|---------------|-------------|--------------|--------------|------------|
+| Jazzy  | [![Jsrc_uN](https://build.ros2.org/job/Jsrc_uN__magnetic_model__ubuntu_noble__source/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Jsrc_uN__magnetic_model__ubuntu_noble__source)  | [![Jsrc_el9](https://build.ros2.org/job/Jsrc_el9__magnetic_model__rhel_9__source/badge/icon?style=flat&subject=RHEL%209)](https://build.ros2.org/job/Jsrc_el9__magnetic_model__rhel_9__source) | [![Jbin_uN64](https://build.ros2.org/job/Jbin_uN64__magnetic_model__ubuntu_noble_amd64__binary/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Jbin_uN64__magnetic_model__ubuntu_noble_amd64__binary) [![jazzy default release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_jazzy_default.html?q=magnetic_model) | [![Jbin_uNv8](https://build.ros2.org/job/Jbin_unv8_uNv8__magnetic_model__ubuntu_noble_arm64__binary/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Jbin_unv8_uNv8__magnetic_model__ubuntu_noble_arm64__binary) [![jazzy unv8 release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_jazzy_unv8.html?q=magnetic_model) | [![Jbin_rhel](https://build.ros2.org/job/Jbin_rhel_el964__magnetic_model__rhel_9_x86_64__binary/badge/icon?style=flat&subject=RHEL%209)](https://build.ros2.org/job/Jbin_rhel_el964__magnetic_model__rhel_9_x86_64__binary) [![jazzy rhel release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_jazzy_rhel.html?q=magnetic_model)|
+| Kilted  | [![Ksrc_uN](https://build.ros2.org/job/Ksrc_uN__magnetic_model__ubuntu_noble__source/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Ksrc_uN__magnetic_model__ubuntu_noble__source)  | [![Ksrc_el9](https://build.ros2.org/job/Ksrc_el9__magnetic_model__rhel_9__source/badge/icon?style=flat&subject=RHEL%209)](https://build.ros2.org/job/Ksrc_el9__magnetic_model__rhel_9__source) | [![Kbin_uN64](https://build.ros2.org/job/Kbin_uN64__magnetic_model__ubuntu_noble_amd64__binary/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Kbin_uN64__magnetic_model__ubuntu_noble_amd64__binary) [![jazzy default release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_kilted_default.html?q=magnetic_model) | [![Kbin_uNv8](https://build.ros2.org/job/Kbin_unv8_uNv8__magnetic_model__ubuntu_noble_arm64__binary/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Kbin_unv8_uNv8__magnetic_model__ubuntu_noble_arm64__binary) [![jazzy unv8 release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_kilted_unv8.html?q=magnetic_model) | [![Kbin_rhel](https://build.ros2.org/job/Kbin_rhel_el964__magnetic_model__rhel_9_x86_64__binary/badge/icon?style=flat&subject=RHEL%209)](https://build.ros2.org/job/Kbin_rhel_el964__magnetic_model__rhel_9_x86_64__binary) [![jazzy rhel release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_kilted_rhel.html?q=magnetic_model)|
+| Rolling  | [![Rsrc_uN](https://build.ros2.org/job/Rsrc_uN__magnetic_model__ubuntu_noble__source/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Rsrc_uN__magnetic_model__ubuntu_noble__source)  | [![Rsrc_el9](https://build.ros2.org/job/Rsrc_el9__magnetic_model__rhel_9__source/badge/icon?style=flat&subject=RHEL%209)](https://build.ros2.org/job/Rsrc_el9__magnetic_model__rhel_9__source) | [![Rbin_uN64](https://build.ros2.org/job/Rbin_uN64__magnetic_model__ubuntu_noble_amd64__binary/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Rbin_uN64__magnetic_model__ubuntu_noble_amd64__binary) [![jazzy default release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_rolling_default.html?q=magnetic_model) | [![Rbin_uNv8](https://build.ros2.org/job/Rbin_unv8_uNv8__magnetic_model__ubuntu_noble_arm64__binary/badge/icon?style=flat&subject=24.04)](https://build.ros2.org/job/Rbin_unv8_uNv8__magnetic_model__ubuntu_noble_arm64__binary) [![jazzy unv8 release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_rolling_unv8.html?q=magnetic_model) | [![Rbin_rhel](https://build.ros2.org/job/Rbin_rhel_el964__magnetic_model__rhel_9_x86_64__binary/badge/icon?style=flat&subject=RHEL%209)](https://build.ros2.org/job/Rbin_rhel_el964__magnetic_model__rhel_9_x86_64__binary) [![jazzy rhel release status](https://img.shields.io/badge/release-status-blue)](https://repo.ros2.org/status_page/ros_rolling_rhel.html?q=magnetic_model)|
