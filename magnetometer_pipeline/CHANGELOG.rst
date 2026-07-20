@@ -5,6 +5,11 @@
 Changelog for package magnetometer_pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.0.5 (2026-07-20)
+------------------
+* Updated readmes.
+* Contributors: Martin Pecka
+
 3.0.4 (2026-07-01)
 ------------------
 
