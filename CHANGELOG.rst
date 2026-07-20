@@ -5,6 +5,9 @@
 Changelog for package magnetic_model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.0.5 (2026-07-20)
+------------------
+
 3.0.4 (2026-07-01)
 ------------------
 * Fixed compatibility with Rolling.
