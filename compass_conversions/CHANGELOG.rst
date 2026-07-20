@@ -5,6 +5,9 @@
 Changelog for package compass_conversions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.0.6 (2026-07-21)
+------------------
+
 3.0.5 (2026-07-20)
 ------------------
 * Fixed build on Rolling.
