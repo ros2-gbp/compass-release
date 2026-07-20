@@ -1,3 +1,31 @@
+## compass (rolling) - 3.0.6-1
+
+The packages in the `compass` repository were released into the `rolling` distro by running `/home/peci1/.local/bin/bloom-release -r rolling compass` on `Mon, 20 Jul 2026 22:58:24 -0000`
+
+These packages were released:
+- `compass_conversions`
+- `compass_interfaces`
+- `magnetic_model`
+- `magnetometer_compass`
+- `magnetometer_pipeline`
+
+Version of package(s) in repository `compass`:
+
+- upstream repository: https://github.com/ctu-vras/compass.git
+- release repository: https://github.com/ros2-gbp/compass-release.git
+- rosdistro version: `3.0.5-1`
+- old version: `3.0.5-1`
+- new version: `3.0.6-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## compass (rolling) - 3.0.5-1
 
 The packages in the `compass` repository were released into the `rolling` distro by running `/home/peci1/.local/bin/bloom-release -r rolling compass` on `Mon, 20 Jul 2026 15:12:27 -0000`
