@@ -15,19 +15,36 @@ This collection of packages provides support for working with azimuths in ROS.
 
 ## Installation
 
-![ROS 1 compatible](https://img.shields.io/badge/ROS-1-blue) ![Melodic](https://img.shields.io/badge/melodic-green) ![Noetic](https://img.shields.io/badge/noetic-green)
+Install from commandline:
 
-Code on `master` branch is for ROS 1 and it has binary releases.
+```bash
+sudo apt install ros-${ROS_DISTRO}-magnetometer-compass
+```
 
-![ROS 2 compatible](https://img.shields.io/badge/ROS-2-blue) ![Jazzy](https://img.shields.io/badge/jazzy-green) ![Kilted](https://img.shields.io/badge/kilted-green) ![Rolling](https://img.shields.io/badge/rolling-green)
+Or declare dependency in package.xml and let rosdep install:
 
-Code on `ros2` branch is for ROS 2 Jazzy and Kilted and does not yet have binary releases.
+```xml
+<exec_depend>magnetometer_compass</exec_depend>
+```
 
-To build this package on ROS 2, you'll need additional packages in your workspace: [rosinstall file](.github/ci.ros2.rosinstall).
+Code on [master branch](../../tree/master) is for ROS 1 and it has binary releases for Noetic. It can be built from source on Melodic.
+
+![ROS 1 compatible](https://img.shields.io/badge/ROS-1-blue)
+![Melodic](https://img.shields.io/badge/ros%20|%20melodic-src-green)
+[![Noetic](https://img.shields.io/ros/v/noetic/compass)](https://index.ros.org/r/compass/#noetic)
+
+Code on [ros2 branch](../../tree/ros2) is for ROS 2 Jazzy, Kilted and Rolling and has binary releases for all these distros.
+Humble, Iron and older ROS 2 distros are not supported.
+
+![ROS 2 compatible](https://img.shields.io/badge/ROS-2-blue)
+[![Jazzy](https://img.shields.io/ros/v/jazzy/compass)](https://index.ros.org/r/compass/#jazzy)
+[![Kilted](https://img.shields.io/ros/v/kilted/compass)](https://index.ros.org/r/compass/#kilted)
+[![Lyrical](https://img.shields.io/ros/v/lyrical/compass)](https://index.ros.org/r/compass/#lyrical)
+[![Rolling](https://img.shields.io/ros/v/rolling/compass)](https://index.ros.org/r/compass/#rolling)
 
 ## Definitions
 
-**ENU** frame is the [standard orientation used in ROS](https://www.ros.org/reps/rep-0103.html). The abbreviation means
+**ENU** frame is the [standard orientation used in ROS](https://reps.openrobotics.org/rep-0103/). The abbreviation means
 East-North-Up and corresponds to the meaning of vector components X, Y and Z. A zero azimuth points towards East and it
 increases counter-clockwise.
 
@@ -54,9 +71,9 @@ time-dependent and they are approximated by the
 The difference between true North and grid North is called **grid convergence**. Its values are only location-dependent
 and do not differ in time. The values also depend on the chosen UTM zone.
 
-Although [ROS specifies that all angular values should be expressed in radians](https://www.ros.org/reps/rep-0103.html),
+Although [ROS specifies that all angular values should be expressed in radians](https://reps.openrobotics.org/rep-0103/),
 the usage of degrees in geography is so common that
-[Azimuth](https://docs.ros.org/en/api/compass_interfaces/html/msg/Azimuth.html) messages support both radians and degrees.
+[Azimuth](https://docs.ros.org/en/rolling/p/compass_interfaces/msg/Azimuth.html) messages support both radians and degrees.
 
 For more information, see https://www.drillingformulas.com/magnetic-declination-and-grid-convergent-and-their-applications-in-directional-drilling/
 or https://en.wikipedia.org/wiki/Azimuth .
