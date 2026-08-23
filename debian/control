@@ -1,0 +1,12 @@
+Source: ros-lyrical-compass-conversions
+Section: misc
+Priority: optional
+Maintainer: "Martin Pecka" <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), libgeographiclib-dev, ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-gen-version-h, ros-lyrical-ament-cmake-gtest <!nocheck>, ros-lyrical-ament-cmake-ros <!nocheck>, ros-lyrical-angles, ros-lyrical-compass-interfaces, ros-lyrical-cras-cpp-common, ros-lyrical-cras-lint <!nocheck>, ros-lyrical-geometry-msgs, ros-lyrical-magnetic-model, ros-lyrical-message-filters, ros-lyrical-pluginlib, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-sensor-msgs, ros-lyrical-std-msgs, ros-lyrical-tf2, ros-lyrical-tf2-geometry-msgs, ros-lyrical-tf2-ros, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/compass_conversions
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-compass-conversions
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgeographiclib-dev, ros-lyrical-angles, ros-lyrical-compass-interfaces, ros-lyrical-cras-cpp-common, ros-lyrical-geometry-msgs, ros-lyrical-magnetic-model, ros-lyrical-message-filters, ros-lyrical-pluginlib, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-sensor-msgs, ros-lyrical-std-msgs, ros-lyrical-tf2, ros-lyrical-tf2-geometry-msgs, ros-lyrical-tf2-ros, ros-lyrical-ros-workspace
+Description: Common conversions for compass data.
