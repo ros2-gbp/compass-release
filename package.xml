@@ -4,12 +4,12 @@
 <!-- SPDX-FileCopyrightText: Czech Technical University in Prague -->
 <package format="3">
   <name>compass_conversions</name>
-  <version>3.0.3</version>
+  <version>4.0.1</version>
   <description>Common conversions for compass data.</description>
 
   <maintainer email="peckama2@fel.cvut.cz">Martin Pecka</maintainer>
 
-  <license file="LICENSE">BSD</license>
+  <license file="LICENSE">BSD-3-Clause</license>
 
   <url type="repository">https://github.com/ctu-vras/compass</url>
   <url type="bugtracker">https://github.com/ctu-vras/compass/issues</url>
