@@ -4,12 +4,12 @@
 <!-- SPDX-FileCopyrightText: Czech Technical University in Prague -->
 <package format="3">
   <name>magnetometer_pipeline</name>
-  <version>4.0.0</version>
+  <version>4.0.1</version>
   <description>Calibration and removing of magnetometer bias.</description>
 
   <maintainer email="peckama2@fel.cvut.cz">Martin Pecka</maintainer>
 
-  <license file="LICENSE">BSD</license>
+  <license file="LICENSE">BSD-3-Clause</license>
 
   <url type="repository">https://github.com/ctu-vras/compass</url>
   <url type="bugtracker">https://github.com/ctu-vras/compass/issues</url>
