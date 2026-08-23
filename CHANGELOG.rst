@@ -5,6 +5,30 @@
 Changelog for package compass_conversions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.1 (2026-08-23)
+------------------
+* fix: Updated license strings to SPDX identifiers
+* Contributors: Martin Pecka
+
+4.0.0 (2026-08-23)
+------------------
+* feat!: Install include directories to subdirectory to support workspace overlays.
+* feat!: Applied new naming scheme
+* feat: Updated code style.
+* Contributors: Martin Pecka
+
+3.0.6 (2026-07-21)
+------------------
+
+3.0.5 (2026-07-20)
+------------------
+* Fixed build on Rolling.
+* Updated readmes.
+* Contributors: Martin Pecka
+
+3.0.4 (2026-07-01)
+------------------
+
 3.0.3 (2026-04-27)
 ------------------
 * Fixed build on Rolling
