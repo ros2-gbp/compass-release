@@ -22,7 +22,9 @@ jobs:
         env:
           - {ROS_DISTRO: jazzy, ROS_REPO: testing, DOCKER_IMAGE: "ghcr.io/sloretz/ros:jazzy-perception", ALLOW_FAIL: no}
           - {ROS_DISTRO: kilted, ROS_REPO: testing, DOCKER_IMAGE: "ghcr.io/sloretz/ros:kilted-perception", ALLOW_FAIL: no}
-          - {ROS_DISTRO: rolling, ROS_REPO: testing, DOCKER_IMAGE: "ghcr.io/sloretz/ros:rolling-perception", ALLOW_FAIL: yes}
+          - {ROS_DISTRO: lyrical, ROS_REPO: testing, DOCKER_IMAGE: "ghcr.io/sloretz/ros:lyrical-perception", ALLOW_FAIL: no}
+          # - {ROS_DISTRO: rolling, ROS_REPO: testing, DOCKER_IMAGE: "ghcr.io/sloretz/ros:rolling-perception", ALLOW_FAIL: yes, OS_CODE_NAME: resolute}
+          - { ROS_DISTRO: rolling, ROS_REPO: testing, DOCKER_IMAGE: "ghcr.io/ros-tooling/setup-ros-docker/setup-ros-docker-ubuntu-resolute-ros-rolling-desktop:master", ALLOW_FAIL: yes, OS_CODE_NAME: resolute }
         os: ["ubuntu-24.04", "ubuntu-24.04-arm"]
     name: "${{ matrix.env.ROS_DISTRO }}-${{ matrix.os }}"
     env:
@@ -31,7 +33,7 @@ jobs:
       VERBOSE_OUTPUT: &verbose true
     runs-on: &runs-on ${{ matrix.os }}
     steps: &steps
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # This step will fetch/store the directory used by ccache before/after the ci run
       - name: Cache ccache
         uses: rhaschke/cache@main
