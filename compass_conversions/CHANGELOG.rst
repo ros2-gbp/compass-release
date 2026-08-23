@@ -1,0 +1,67 @@
+.. SPDX-License-Identifier: BSD-3-Clause
+.. SPDX-FileCopyrightText: Czech Technical University in Prague
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package compass_conversions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+3.0.6 (2026-07-21)
+------------------
+
+3.0.5 (2026-07-20)
+------------------
+* Fixed build on Rolling.
+* Updated readmes.
+* Contributors: Martin Pecka
+
+3.0.4 (2026-07-01)
+------------------
+
+3.0.3 (2026-04-27)
+------------------
+* Fixed build on Rolling
+* Docs: Added build status to repo readmes.
+* Contributors: Martin Pecka
+
+3.0.2 (2026-01-26)
+------------------
+* Fixed build with GCC 11
+* Contributors: Martin Pecka
+
+3.0.1 (2026-01-26)
+------------------
+* Fixed deprecations on Rolling
+* Contributors: Martin Pecka
+
+3.0.0 (2026-01-26)
+------------------
+* ROS 2 port.
+* Contributors: Adam Herold, Martin Pecka
+
+2.0.3 (2024-12-20)
+------------------
+
+2.0.2 (2024-12-20)
+------------------
+* Fixed README rendering on ROS Wiki.
+* Contributors: Martin Pecka
+
+2.0.1 (2024-12-12)
+------------------
+* Fixed license issues preventing bloom-release.
+* Fixed documentation generation.
+* Contributors: Martin Pecka
+
+2.0.0 (2024-12-12)
+------------------
+* Restructured the repo, created compass_conversions, magnetic_model and magnetometer_pipeline packages.
+* Contributors: Martin Pecka
+
+1.0.3 (2023-07-12 15:43)
+------------------------
+
+1.0.2 (2023-07-12 15:26)
+------------------------
+
+1.0.1 (2023-06-19)
+------------------
