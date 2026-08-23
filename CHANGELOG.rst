@@ -5,6 +5,13 @@
 Changelog for package magnetometer_pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.0 (2026-08-23)
+------------------
+* feat!: Install include directories to subdirectory to support workspace overlays.
+* feat!: Applied new naming scheme.
+* feat: Updated code style.
+* Contributors: Martin Pecka
+
 3.0.6 (2026-07-21)
 ------------------
 
