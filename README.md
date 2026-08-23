@@ -1,3 +1,31 @@
+## compass (jazzy) - 4.0.1-1
+
+The packages in the `compass` repository were released into the `jazzy` distro by running `/home/peci1/.local/bin/bloom-release -r jazzy compass` on `Sun, 23 Aug 2026 04:26:54 -0000`
+
+These packages were released:
+- `compass_conversions`
+- `compass_interfaces`
+- `magnetic_model`
+- `magnetometer_compass`
+- `magnetometer_pipeline`
+
+Version of package(s) in repository `compass`:
+
+- upstream repository: https://github.com/ctu-vras/compass.git
+- release repository: https://github.com/ros2-gbp/compass-release.git
+- rosdistro version: `3.0.2-1`
+- old version: `3.0.2-1`
+- new version: `4.0.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## compass (lyrical) - 4.0.1-1
 
 The packages in the `compass` repository were released into the `lyrical` distro by running `/home/peci1/.local/bin/bloom-release -r lyrical compass` on `Sun, 23 Aug 2026 04:23:31 -0000`
